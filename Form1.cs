@@ -1,4 +1,13 @@
-﻿using System;
+﻿//Please note: This application is purely for my own education, to run through coding 
+//examples by following tutorials, and to just tinker around with coding.  
+//I know it’s bad practice to heavily comment code (code smell), but comments in all of my 
+//exercises will largely be left intact as this serves me 2 purposes:
+//    I want to retain what my original thought process was at the time
+//    I want to be able to look back in 1..5..10 years to see how far I’ve come
+//    And I enjoy commenting on things, however redundant this may be . . . 
+
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -61,7 +70,7 @@ namespace WindowsCalculator
                 operation = b.Text;
                 equation.Text = value + " " + operation;
             }
-            else if(b.Text == "Sqrt")
+            else if (b.Text == "Sqrt")
             {
                 result.Text = Math.Sqrt(Double.Parse(result.Text)).ToString();
                 value = Math.Sqrt(Double.Parse(result.Text));
@@ -79,7 +88,7 @@ namespace WindowsCalculator
         private void equals_Click(object sender, EventArgs e)
         {
             equation.Text = "";
-            switch(operation)
+            switch (operation)
             {
                 case "+":
                     // result will equal (variable now stored in "value") +-/* (whatever is currently stored onscreen)
@@ -113,7 +122,7 @@ namespace WindowsCalculator
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            switch(e.KeyChar.ToString())
+            switch (e.KeyChar.ToString())
             {
                 case "0":
                     zero.PerformClick();
